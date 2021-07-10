@@ -1,0 +1,46 @@
+.fadeout {
+    animation: fadeinout 2s linear forwards;
+    }
+
+@keyframes fadeinout {
+    0%,60%  { opacity: 1; }
+    100%    { opacity: 0; }
+    }
+
+input[type="text"], input[type="email"], input[type="number"], input[type="password"], textarea {
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    color: black;
+    padding: 15px 32px;
+    font-size: 16px;
+    width: 300px;
+    }
+
+input[type="radio"] {
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    color: black;
+    padding: 15px 32px;
+    font-size: 16px;
+    width: 50px;
+    }
+
+input[type="Submit"] {
+    align: center;
+    margin: 2px;
+    background-color: white;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration-style: solid;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    width: 300px
+    }
+input[type="Submit"]:hover {
+    background-color: #2E8B57;
+    color: white;
+    }

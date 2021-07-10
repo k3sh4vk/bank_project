@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nico Bank Ltd</title>
+    <link rel="stylesheet" href="{% static 'RegisterAccount/style.css' %}">
+</head>
+<body>
+    <h1 align="center">Register Your Account</h1>
+    <div align="center">
+        <form method="POST">
+            {% csrf_token %}
+            <table align="center">
+                {{registerForm.as_table}}
+            </table>
+        </form>
+    </div>
+    <div>
+        {% if messages %}
+        {% for message in messages %}
+            <div class="fadeout" align="center"><br><h1 style="color: solid Tomato">{{ message }}</h1></div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</body>
+</html>
