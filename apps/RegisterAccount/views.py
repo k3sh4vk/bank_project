@@ -16,7 +16,8 @@ def register_view(request):
             else:
                 user = User.objects.create_user(username=registration.cleaned_data['UserName'],
                                                 email=registration.cleaned_data['Email'],
-                                                password=registration.cleaned_data['Password'])
+                                                password=registration.cleaned_data['Password'],
+                                                )
                 user.save()
                 registration.save()
                 messages.add_message(request, messages.SUCCESS, 'Account Created Successfully!')
